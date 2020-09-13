@@ -1,0 +1,89 @@
+<body >
+<link rel='stylesheet' href='k.css' type='text/css' />
+<link rel="shortcut icon" href="/_layouts/15/images/favicon.ico?rev=23" type="image/vnd.microsoft.icon" id="favicon" /><link rel="stylesheet" type="text/css" href="/sites/CorrectHealth/_catalogs/theme/Themed/E7C99722/corev15-51C31438.themedcss?ctag=9"/>
+<br>
+<br>
+<title>Login</title>
+<div class="k">
+<h1 > <br>Mickroweb Information Softwares </h1>
+</div>
+<br>
+
+
+<form name="myform" method="post" action="home.html" onsubmit="return validateform()" >   
+<div class="s">
+
+<center>
+<table border=1px>
+<table >
+<tr>
+<td>User Name</td>
+<td>
+<input type="text"name="name" placeholder="User Name"/>
+</td>
+</tr>
+
+<tr>
+	<td>Password</td>
+	<td><input type="password" value="" id="myInput" placeholder="Password"/>
+	<td><input type="checkbox" onclick="myFunction()">Show Password </td>
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>
+<input type="Submit"value="Login"/>
+</td>
+</tr>
+</center>
+</div>
+</form>  
+
+<script>  
+function validateform()
+{  
+var name=document.myform.name.value;  
+var password=document.myform.myInput.value;  
+  
+if (name==null || name=="")
+{  
+  alert("User Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+
+if (name!="karthi")
+{  
+  alert("Invalid User Name");  
+  return false;  
+}else if(password !="123456"){  
+  alert("Invalid Password.");  
+  return false;  
+  }  
+
+}  
+</script>  
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<div class="footer">
+  <p>Copy right @2020 by karthi</p>
+</div>
+
+  
+<script src="check-password.js"></script>
+
+</body>
+</html>
